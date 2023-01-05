@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alkalami&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,500&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/esse/style.css">
+    <link rel="stylesheet" href="style/target/style.css">
+    <link rel="stylesheet" href="style/graph/style.css">
+    <link rel="stylesheet" href="style/calculator/style.css">
+
+    <title>Site</title>
+</head>
+<body>
+    <div class="filter">
+
+        <div class="menu">
+            <div class="menu-item target" data-container="1">target</div>
+            <div class="menu-item equation" data-container="2">equation</div>
+            <div class="menu-item numbers" data-container="3">numbers</div>
+            <div class="menu-item esse" data-container="4">esse</div>
+            <div class="menu-item questions" data-container="5">questions</div>
+            <div class="menu-item graph" data-container="6">graph</div>
+            <div class="menu-item polynomial" data-container="7">calculator</div>
+            <div class="menu-item polynomial" data-container="8">polynomial</div>
+        </div>
+
+        <!--esse-->
+        <div class="container-aside-esse container" id="4">
+
+            <div class="card-wrapper">
+                <div class="card">
+                    <div class="card-front">
+                        <img class="card-image" src="img/IMG_6665.jpg" alt="" height="450px"
+                             width="300px">
+                    </div>
+
+                    <div class="card-back">
+                        <h2 class="card-title">Почему я поступил сюда?</h2>
+                        <div class="card-text">
+                            <ul class="card-ul">
+                                <li>Университет находится недалеко от дома.</li>
+                                <li>Рядом находится классный стадион.</li>
+                                <li>Прошел по баллам.</li>
+                            </ul>
+
+                        </div>
+
+                        <h2 class="card-title-two">Чего я хочу от обучения?</h2>
+                        <div class="card-text-two">
+                            <p class="card-ul">Кучу полезных знаний по математике и программированию, которые мне пригодятся в будущем.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!--target-->
+        <div class="container-target container hidden" id="1">
+            <div class="schema">
+                <canvas id="circle"></canvas>
+            </div>
+            <div class="inner">
+                <p class="text">Введите координаты X и Y</p>
+
+                <input type="number" placeholder="X" class="input-x input">
+                <input type="number" placeholder="Y" class="input-y input">
+                <button class="button-go button-target">GO</button>
+
+                <p class="result-target text"></p>
+
+                <!--random-target-->
+                <p class="text random">Введите min, max, кол-во выстрелов</p>
+
+                <input type="number" placeholder="min(-1)" class="input-min input">
+                <input type="number" placeholder="max(1)" class="input-max input">
+                <input type="number" placeholder="count" class="input-count input">
+                <button class="button-random-target button-go">GO</button>
+
+                <p class="result-target-random text"></p>
+
+            </div>
+        </div>
+
+        <!--equation-->
+        <div class="container-equation container hidden" id="2">
+            <div class="inner">
+                <p class="text">Введите коэффициенты  A, B, C, D, E</p>
+                <p class="text">Для линейного уравнения  0 = A * x + B</p>
+                <p class="text">Для квадратного уравнения  0 = A * x^2 + B * x + C</p>
+               <!-- <p class="text">Для кубического уравнения  0 = A * x^3 + B * x^2 + C * x + D</p>
+                <p class="text">Для биквадратного уравнения  0 = A * x^4 + B * x^3 + C * x^2 + D * x + E</p>-->
+
+                <input type="number" placeholder="A" class="input input-A">
+                <input type="number" placeholder="B" class="input input-B">
+                <input type="number" placeholder="C" class="input input-C">
+                <!--<input type="number" placeholder="D" class="input input-D">
+                <input type="number" placeholder="E" class="input input-E">-->
+                <button class="button-go-equation button-go">GO</button>
+
+                <p class="result-equation text"></p>
+
+            </div>
+        </div>
+
+        <!--numbers-->
+        <div class="container-numbers container hidden" id="3">
+            <div class="inner">
+                <p class="text">Введите число до которого считать</p>
+
+                <input type="number" placeholder="max" class="input-numbers input">
+                <button class="button-go-numbers button-go">GO</button>
+
+                <p class="result-numbers text"></p>
+
+            </div>
+        </div>
+
+        <!--questions-->
+        <div class="container-questions container hidden" id="5">
+            <div class="inner">
+                <p id="question-title" class="text"> </p>
+                <img id="question-image" height="200" alt="">
+                <p id="question-description" class="text"></p>
+                <div id="question-ask"></div>
+            </div>
+        </div>
+
+        <!--Graph-->
+        <div class="container hidden" id="6">
+            <div class="container-graph">
+                <canvas class="graph" id="graph"></canvas>
+                <div class="container-button-graph">
+                    <button id="addFunction" class="btn">Add</button>
+                    <div class="graph-div" id="funcInputs">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Calculator-->
+        <div class="container hidden" id="7">
+            <div class="container-input-calc container-calc">
+                <textarea placeholder="a" class="input-calc" id="a"></textarea>
+                <textarea placeholder="b" class="input-calc" id="b"></textarea>
+            </div>
+
+            <div class="container-button-calc container-calc">
+                <button class="button-calc" id='add'>add</button>
+                <button class="button-calc" id='sub'>sub</button>
+                <button class="button-calc" id='mult'>mult</button>
+                <button class="button-calc" id='div'>div</button>
+                <button class="button-calc" id='prod'>prod</button>
+                <button class="button-calc" id='pow'>pow</button>
+            </div>
+
+            <div class="container-answer-calc container-calc">
+                <pre id="answer" class="answer-calc"></pre>
+            </div>
+        </div>
+
+        <!--Polynomial-->
+        <div class="container hidden" id="8">
+            <div class="container-input-calc container-calc">
+                <textarea placeholder="a" class="input-poly" id="a-poly"></textarea>
+                <textarea placeholder="b" class="input-poly" id="b-poly"></textarea>
+                <input placeholder="x" class="input-graph" id="x">
+            </div>
+
+            <div class="container-button-calc container-calc">
+                <button class="button-poly" data-operand="add" id='add-poly'>add</button>
+                <button class="button-poly" data-operand="sub" id='sub-poly'>sub</button>
+                <button class="button-poly" data-operand="mult" id='mult-poly'>mult</button>
+                <button class="x" data-operand="x" id='x-button'>x</button>
+            </div>
+
+            <div class="container-answer-calc container-calc">
+                <pre id="answer-poly" class="answer-poly"></pre>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/commonCalculator/vector/Vector.js"></script>
+    <script src="js/commonCalculator/complex/Complex.js"></script>
+    <script src="js/commonCalculator/matrix/Matrix.js"></script>
+    <script src="js/commonCalculator/real/RealCalculator.js"></script>
+    <script src="js/commonCalculator/matrix/MatrixCalculator.js"></script>
+    <script src="js/commonCalculator/complex/ComplexCalculator.js"></script>
+    <script src="js/commonCalculator/vector/VectorCalculator.js"></script>
+    <script src="js/commonCalculator/calculator/Calculator.js"></script>
+
+    <script src="js/main/CalculatorMenu.js"></script>
+    <script src="js/main/main.js"></script>
+
+    <script src="js/polynomial/Polynomial.js"></script>
+    <script src="js/polynomial/Member.js"></script>
+    <script src="js/polynomial/PolynomialCalculator.js"></script>
+    <script src="js/polynomial/PolynomialMenu.js"></script>
+
+    <script src="js/quest/data.js"></script>
+    <script src="js/quest/game.js"></script>
+    <script src="js/quest/student.js"></script>
+    <script src="js/quest/studentGirl.js"></script>
+    <script src="js/target/target.js"></script>
+    <script src="js/numbers/numbers.js"></script>
+    <script src="js/equation/equation.js"></script>
+
+
+
+    <script src="js/graph/canvas.js"></script>
+    <script src="js/graph/UI.js"></script>
+</body>
+</html>

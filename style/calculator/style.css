@@ -1,0 +1,123 @@
+.x, .button-calc, .button-poly {
+    margin: 10px auto;
+    display: block;
+    width: 140px;
+    height: 40px;
+}
+
+.x, .button-calc, .button-poly {
+    display: block;
+    padding: 3px 3px;
+    color: #ffffff;
+    background-color: #1b49c4;
+
+    font-family: 'Satisfy', cursive;
+
+    border: 1px solid #070777;
+    border-radius: 5px;
+
+    line-height: 1.2;
+    font-size: 16px;
+
+    text-align: center;
+
+    z-index: 1;
+    position: relative;
+
+    margin-top: 0;
+    margin-bottom: 18px;
+}
+
+
+.button-calc:hover {
+    background-color: rgb(29, 29, 93);
+    cursor: pointer;
+
+    transition: linear .2s;
+}
+
+.button-poly:hover {
+    background-color: rgb(29, 29, 93);
+    cursor: pointer;
+
+    transition: linear .2s;
+}
+
+.x:hover {
+    background-color: rgb(29, 29, 93);
+    cursor: pointer;
+
+    transition: linear .2s;
+}
+
+.button-calc:focus {
+    opacity: 1;
+}
+
+.button-poly:focus {
+    opacity: 1;
+}
+
+.container-calc {
+    height: auto;
+    margin: auto;
+
+    text-align: center;
+    align-items: center;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-input-calc {
+    width: 640px;
+    padding-top: 40px;
+}
+
+.container-button-calc {
+    width: 75%;
+}
+
+.container-answer-calc {
+    height: auto;
+    margin: 20px auto;
+    width: 65%;
+
+    text-align: center;
+    align-items: center;
+}
+
+.input-calc, .input-poly {
+    position: relative;
+    padding: 8px;
+
+    margin-bottom: 18px;
+    margin-left: 10px;
+
+    font-family: 'Satisfy', cursive;
+    font-size: 20px;
+
+    border: 2px solid rgb(10, 10, 10);
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    border-radius:10px;
+
+    display: inline;
+    width: 240px;
+    height: 60px;
+
+    min-height: 120px;
+    min-width: 240px;
+
+    max-width: 240px;
+    max-height: 220px;
+}
+
+.answer-calc, .answer-poly {
+    font-family: 'Satisfy', cursive;
+    font-size: 45px;
+
+    color: white;
+    margin: auto;
+}
+
+

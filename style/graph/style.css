@@ -1,0 +1,124 @@
+.input-graph, .funcInputs {
+    position: relative;
+    padding: 8px;
+
+    margin-bottom: 8px;
+    margin-left: 14px;
+
+    font-family: 'Satisfy', cursive;
+    font-size: 20px;
+
+    border: 2px solid rgb(10, 10, 10);
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    border-radius:10px;
+    display: block;
+    width: 150px;
+    height: 24px;
+}
+
+.graph-div {
+    width: 100%;
+    display: flex;
+}
+
+.container-graph {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    margin: 80px;
+
+    text-align: center;
+    align-items: center;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-button-graph {
+    width: 100%;
+}
+
+.title {
+    font-family: 'Satisfy', cursive;
+    color: #d9d9d9;
+    text-shadow: 6px 6px 6px #000;
+    margin: 20px 10px 10px 30px;
+    font-size: 34px;
+    font-weight: 400;
+}
+
+.graph {
+    border-radius: 8px;
+}
+
+.temporary {
+    width: 14px;
+    margin: 0 auto;
+
+    background: none;
+    color: #888787;
+
+    font-size: 14px;
+}
+
+.btn {
+    text-decoration: none;
+    font-family: 'Satisfy', cursive;
+    line-height: 1.2;
+    font-size: 16px;
+
+    color: #8a1447;
+    background-image: linear-gradient(90deg, #fd7f34, #bd155b);
+    display: inline-block;
+    padding: 3px 3px;
+    border: 1px solid;
+    position: relative;
+    z-index: 0;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin: 0 15px 15px 0;
+    outline: none;
+    cursor: pointer;
+    user-select: none;
+    appearance: none;
+    touch-action: manipulation;
+
+    width: 60px;
+}
+
+.btn:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #fff, #fff);
+    z-index: -1;
+    border-radius: 4px;
+}
+
+.btn:hover {
+    color: #fff;
+    transition: .1s;
+}
+
+.btn:hover:after {
+    background: linear-gradient(90deg, #fd7f34, #bd155b);
+}
+
+.btn:active:after {
+    background: linear-gradient(90deg, #d96d2d, #760f3a);
+}
+
+.btn:focus-visible {
+    box-shadow: 0 0 0 3px #fd7f34;
+}
+
+.btn:disabled {
+    pointer-events: none;
+}
+
+.btn:disabled:before {
+    filter: grayscale(100%);
+}
